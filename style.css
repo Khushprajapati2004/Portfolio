@@ -972,6 +972,15 @@ footer {
     height: 20%;
     width: 70rem;
   }
+
+  .services .services-container {
+    gap: 2;
+    padding: 2rem .5rem;
+  }
+
+  .portfolio .portfolio-container {
+    padding: 0 .5rem;
+  }
 }
 
 @media (max-width: 365px) {
