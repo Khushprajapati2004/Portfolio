@@ -119,7 +119,7 @@ header.sticky {
   height: 100vh;
   display: flex;
   align-items: center;
-  padding: 60px 7% 0;
+  padding: 50px 7% 0;
 }
 
 .home .home-content {
@@ -364,6 +364,10 @@ span {
 .about-content p {
   font-size: 1.9rem;
   margin: 2rem 0 4rem;
+  display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .heading {
@@ -388,7 +392,7 @@ span {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 6rem;
   padding: 0px 40px;
 }
 
@@ -397,11 +401,13 @@ span {
   background: var(--bg--color);
   padding: 4rem 2rem 4rem;
   border-radius: 2rem;
+  height: 42rem;
   box-shadow: 0 0.1rem 0.5rem var(--shadow-color);
   text-align: center;
   border-top: 0.6rem solid var(--main-color);
   border-bottom: 0.6rem solid var(--main-color);
   transition: 0.5s ease;
+
 }
 
 .services-container .services-box:hover {
@@ -428,6 +434,10 @@ span {
   font-size: 1.9rem;
   margin: 1rem 0rem 3rem;
   color: #0b061f;
+  display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .services-box:hover p {
@@ -844,6 +854,8 @@ footer {
 
   .profession-container .overlayout {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     top: 82rem;
     left: 50%;
     transform: rotate(90deg) translate(-50%, 50%) scaleY(3);
@@ -898,6 +910,11 @@ footer {
     width: 70rem;
   }
 
+  .home .profession-container .profession-box {
+    height: 0rem;
+    margin-top: 46rem;
+  }
+
   html {
     font-size: 50%;
   }
@@ -932,6 +949,21 @@ footer {
 }
 
 @media (max-width: 440px) {
+
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home .home-content p {
+    font-size: 1.7rem;
+    width: 40rem;
+  }
+
+  .home-content {
+    top: -5rem;
+  }
+
   .about .about-image img {
     height: 20%;
     width: 70rem;
@@ -939,8 +971,9 @@ footer {
 }
 
 @media (max-width: 365px) {
+  
   .about .about-image img {
-    width: 65vh;
+    width: 65rem;
   }
 
   .footer {
@@ -963,7 +996,7 @@ footer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px;
+  padding: 40px;
   background-color: #4caf50;
   color: white;
   border-radius: 8px;
