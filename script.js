@@ -60,3 +60,40 @@ ScrollReveal().reveal('.home-content h1, .about-image img', { origin: 'left' });
 ScrollReveal().reveal('.home-content h3, .home-content p, .about-content, .profession-box', { origin: 'right' });
 
 
+
+
+ // Handle form submission
+ document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault(); // Prevent default form submission
+  
+  const formData = new FormData(this);
+  const data = {};
+  formData.forEach((value, key) => data[key] = value);
+
+  try {
+      const response = await fetch('http://localhost:3000/send-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+          showPopup();  // Show success popup if email is sent
+      } else {
+          alert('Error sending email.');
+      }
+  } catch (error) {
+      alert('Error: ' + error.message);
+  }
+});
+
+// Show the popup
+function showPopup() {
+  const popup = document.getElementById('popup');
+  popup.classList.add('show');
+
+  // Hide popup after 3 seconds
+  setTimeout(() => {
+      popup.classList.remove('show');
+  }, 3000);
+}

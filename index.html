@@ -206,7 +206,7 @@
 
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
-        <form action="http://localhost:3000/send-email" method="post" class="contact-form">
+        <form id="contact-form" class="contact-form">
             <div class="input-box">
                 <input type="text" name="full_name" placeholder="Full Name" required>
                 <input type="email" name="email" placeholder="E-mail Address" required>
@@ -219,6 +219,12 @@
             <input type="submit" value="Send Message" class="btn">
         </form>
     </section>
+
+     <!-- Popup element -->
+     <div class="popup" id="popup">
+        <div class="icon">✅</div>
+        <div>Email Sent Successfully!</div>
+    </div>
     
 
     <!------------- Footer Design  -------------->

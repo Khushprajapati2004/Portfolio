@@ -22,7 +22,7 @@ app.post('/send-email', (req, res) => {
         service: 'gmail',
         auth: {
             user: process.env.GMAIL_USER,  // Your Gmail address (from environment variables)
-            pass: process.env.GMAIL_PASS,  // Your Gmail App Password (from environment variables)
+            pass: process.env.GMAIL_PASS,   // Your Gmail App Password (from environment variables)
         },
     });
 
