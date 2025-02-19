@@ -459,7 +459,8 @@ span {
 
 .portfolio .portfolio-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  /* grid-template-columns: repeat(3, 1fr); */
   align-items: center;
   gap: 4rem;
   padding: 0 60px;
@@ -471,6 +472,7 @@ span {
   border-radius: 2rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  height: 100%; 
 }
 
 .portfolio-box img {
